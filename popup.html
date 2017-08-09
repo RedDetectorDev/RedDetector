@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>紅色背景偵測器</title>
+<meta charset="UTF-8">
+<script type="text/javascript" src="popup.js"></script>
+<style type="text/css">
+body {
+  font-family: 'PingFang HK', 'Heiti TC', 'Noto Sans CJK TC', 'WenQuanYi Micro Hei', '微軟正黑體', '蘋方-港', '黑體-繁', Helvetica, Arial, sans-serif;
+  background-color: #f9f9f9;
+  padding: 15px 10px;
+  font-size: .85em;
+  min-width:300px;
+}
+
+h1 {
+  font-size: 1.6em;
+  white-space: nowrap;
+  margin: 0 0.25em;
+  color: #444;
+  font-weight: 200;
+  text-align: center
+}
+hr {
+  border: 0;
+  background-color: #f0f0f0;
+  height: 1px;
+}
+#controls ul {
+  padding: 0;
+}
+#controls ul li {
+  line-height: 2.1em;
+  list-style-type: none;
+  text-indent: 29px;
+  cursor: pointer;
+  color: #1488ff;
+  transition: all .2s ease-out
+}
+#controls ul li:hover {
+  background-color: #fff;
+  color: #0268df;
+  transition: none;
+}
+#dec, #inc {
+  transition: all .2s ease-out;
+}
+#echo {
+  padding: 0 5px;
+  font-size: 1.2em;
+}
+#loading {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+}
+#refresh.error {
+  color: #cc4444;
+}
+#loading.hidden {
+  display: none;
+}
+h6 {
+  position: absolute;
+  bottom: -10px;
+  right: 30px;
+  color: #888;
+}
+</style>
+</head>
+<body>
+
+<h1>☭ 紅色背景偵測器 ☭</h1>
+<div id="controls">
+  <form>
+    <ul>
+      <li id="toggle"><span id="toggleState">&#9745;</span>&nbsp;啟動偵測器於&nbsp;<span id="siteName"></span></li>
+      <li id="toggleWords"><span id="toggleWordsState">>&#9745;</span> 偵測匪語</li>
+<!--
+      <li id="toggleCase"><span id="toggleCaseState">&#9745;</span> Case Sensitivity</li>
+      <li id="toggleTree"><span id="toggleTreeState">&#9745;</span> Tree Algorithm</li>
+      <li id="toggleSingle"><span id="toggleSingleState">&#9745;</span> Match Single Words</li>
+-->
+      <li id="refresh">染紅列表更新（目前數量：<span id="count"></span>）</li>
+      <hr />
+      <li class="center">疫症等級 &nbsp; <span id="dec">&#9664;</span><span id="hammer"></span> <span id="inc">&#9654;</span></li>
+      <hr />
+    </ul>
+  </form>
+</div>
+
+<h6>
+  v<span id="version">14.8.1</span>
+</h6>
+
+<div id="loading" class="hidden">
+  <img src="loading.gif">
+</div>
+
+</body>
+</html>
