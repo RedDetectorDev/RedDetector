@@ -84,7 +84,6 @@ chrome.runtime.sendMessage(null, {op:"load"}, null, function(state) {
     if (enableWords) {
       v = v.replace(regexpWords, function(j){ count++; return flagify(j, hammerFactor) });
     }
-    v = v.replace(/\bIsrael\b/g, hammerify("Our Greatest Ally", hammerFactor));
     textNode.nodeValue = v;
   };
 
