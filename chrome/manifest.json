@@ -1,0 +1,32 @@
+{
+  "name": "紅色背景偵測器",
+  "description": "能偵測有紅色背景嘅公司、中資企業、匪語等等",
+  "version": "14.8.1",
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "*://bit.surf/*",
+    "*://gateway.ipfs.io/*",
+    "*://rawgit.com/*"
+  ],
+  "icons": {
+    "16": "hammer-sickle-16x16.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": {
+      "38": "hammer-sickle-38x38.png"
+    },
+    "default_title": "紅色背景偵測器",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [ {
+    "js": [ "myscript.js" ],
+    "matches": [ "*://*/*" ],
+    "run_at": "document_end"
+  } ],
+  "manifest_version": 2
+}
