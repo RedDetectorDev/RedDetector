@@ -4,6 +4,8 @@
 
 ![detection example](https://i.imgur.com/3faBIml.png)
 
+![detection example 2](https://i.imgur.com/G4EiRd8.png)
+
 ![screenshot](https://i.imgur.com/GVvPpJ1.png)
 
 ## 功能
@@ -26,7 +28,8 @@
 
 ### Firefox
 
-到 [Add-ons for Firefox 下載](https://addons.mozilla.org/en-GB/firefox/addon/%E7%B4%85%E8%89%B2%E8%83%8C%E6%99%AF%E5%81%B5%E6%B8%AC%E5%99%A8/)。
+1. 到 [Add-ons for Firefox 下載](https://addons.mozilla.org/en-GB/firefox/addon/%E7%B4%85%E8%89%B2%E8%83%8C%E6%99%AF%E5%81%B5%E6%B8%AC%E5%99%A8/)。
+2. 到 [Release](https://github.com/RedDetectorDev/RedDetector/releases) 下載XPI檔，然後Drag-and-drop拉落Firefox到。
 
 ### Safari
 

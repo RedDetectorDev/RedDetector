@@ -621,7 +621,7 @@ var hammerFactor = storage.default('hammerFactor', 1);
 
 var enableWords = storage.default('enableWords', true);
 
-var caseSensitivity = storage.default('caseSensitivity', true);
+var caseSensitivity = storage.default('caseSensitivity', false);
 
 var enableTree = storage.default('enableTree', false);
 
