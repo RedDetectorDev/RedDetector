@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "紅色背景偵測器",
-  "version": "14.8.1",
+  "version": "14.8.2",
 
   "description": "能偵測有紅色背景嘅公司、中資企業、匪語等等",
   "icons": {
