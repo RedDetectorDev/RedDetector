@@ -4,6 +4,8 @@
 
 ![detection example](https://i.imgur.com/3faBIml.png)
 
+![detection example 2](https://i.imgur.com/G4EiRd8.png)
+
 ![screenshot](https://i.imgur.com/GVvPpJ1.png)
 
 ## 功能
