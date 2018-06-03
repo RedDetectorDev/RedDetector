@@ -13,7 +13,6 @@
   "applications": {
     "gecko": {
       "id": "firefox-webextension-dev@reddetector.com",
-      "strict_min_version": "45.0"
     }
   },
 
