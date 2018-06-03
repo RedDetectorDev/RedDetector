@@ -12,7 +12,7 @@
 
   "applications": {
     "gecko": {
-      "id": "firefox-webextension-dev@reddetector.com",
+      "id": "firefox-webextension-dev@reddetector.com"
     }
   },
 
