@@ -57,7 +57,7 @@ When it comes time to release, something like this should happen:
 # from master
 git pull
 git checkout chrome
-git rebase master
+git merge master
 # then make any changes necessary to manifest.json
 git tag v14.8.1-chrome
 ```
