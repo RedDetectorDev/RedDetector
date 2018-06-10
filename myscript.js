@@ -15,10 +15,7 @@ chrome.runtime.sendMessage(null, {op: "clear-title"}, null, function(){});
 chrome.runtime.sendMessage(null, {op:"load"}, null, function(state) {
   var theList = state.theList;
   var pattern = state.pattern;
-  var theListEng = state.theListEng;
   var patternEng = state.patternEng;
-  var theListWords = state.theListWords;
-  var patternWords = state.patternWords;
   var theTree = state.theTree;
   var enableWords = state.enableWords;
   var caseSensitivity = state.caseSensitivity;
@@ -26,7 +23,6 @@ chrome.runtime.sendMessage(null, {op:"load"}, null, function(state) {
   if (!enableTree) {
     var regexp = new RegExp(pattern, (caseSensitivity ? "g" : "gi"));
     var regexpEng = new RegExp(patternEng, (caseSensitivity ? "g" : "gi"));
-    var regexpWords = new RegExp(patternWords, (caseSensitivity ? "g" : "gi"));
   }
   var hammerFactor = state.hammerFactor;
   var storage = state.storage;
@@ -75,15 +71,11 @@ chrome.runtime.sendMessage(null, {op:"load"}, null, function(state) {
       anchorStack.pop();
     }
   };
-
   var handleText = function(textNode) {
     count++;
     var v = textNode.nodeValue;
     v = v.replace(regexp, function(j){ count++; return hammerify(j, hammerFactor) });
     v = v.replace(regexpEng, function(j){ count++; return hammerify(j, hammerFactor) });
-    if (enableWords) {
-      v = v.replace(regexpWords, function(j){ count++; return flagify(j, hammerFactor) });
-    }
     textNode.nodeValue = v;
   };
 
@@ -168,4 +160,3 @@ chrome.runtime.sendMessage(null, {op:"load"}, null, function(state) {
   */
 
 });
-
