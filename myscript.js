@@ -55,6 +55,10 @@ chrome.runtime.sendMessage(null, {op:"load"}, null, function(state) {
     switch (node.nodeType)
     {
       case 1:
+        if (node.tagName.toLowerCase() === 'input' || node.tagName.toLowerCase() === 'textarea') {
+          break; // do not process user input
+        }
+        // no break
       case 9:
       case 11:
         while ( child )
